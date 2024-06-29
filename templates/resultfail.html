@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI HIRING Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #333;
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            /* Remove the border-bottom property */
+            padding-bottom: 10px;
+            /* Updated font style */
+            font-style: italic;
+        }
+
+        .spa {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        p.error {
+            background-color: #ffcccc;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-style: italic;
+            color: #ff0000;
+        }
+
+        p.error::before {
+            content: "⚠ ";
+        }
+    </style>
+</head>
+<body>
+    <!-- Removed the border-bottom from the h1 tag -->
+    <h1>Result</h1>
+    <div class="card">
+        <p>The predicted result is: <span class="spa">{{ prediction }}</span></p>
+        <p class="error">Sorry, but you have a 14% chance to be shortlisted for this job.</p>
+        <p>Don't lose hope... Retry for another job offer.</p>
+    </div>
+</body>
+</html>

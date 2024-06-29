@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOB Predictor</title>
+   
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div class="main">
+        <div class="divi">
+            <div>
+        <h1 class="header">AI Hiring System</h1>
+        <p>This website is designed for to predict Job Occurance by using ML</p>
+        </div>
+        <div class="box">
+        <form class="fo" action="/predict" method="POST">
+            <spam>Enrollee_id :
+            <input type="number" id="Enrollee_id" name="Enrollee_id" >
+            </spam><br>
+
+            <spam>City:
+            <input type="number" id="city" name="city" >
+            </spam>
+            <br>
+            <spam>City Development index :
+            <input type="number " id="city_development_index" name="city_development_index">
+            </spam>
+            <br>
+            <spam>Gender:<br>
+                <input type="radio" id="Female" name="Gender" value="2">
+                <label for="Female">Female</label><br>
+                <input type="radio" id="Male" name="Gender" value="1">
+                <label for="Male">Male</label><br>
+                <input type="radio" id="Others" name="Gender" value="0">
+                <label for="Others">Others</label>
+            </spam>
+
+<br>
+
+            <spam>Relative Experence:<br>
+                <input type="radio" id="Yes" name="rel_experence" value="1">
+  <label for="rel_experence">Has relative experence</label><br>
+  <input type="radio" id="No" name="rel_experence" value="0">
+  <label for="rel_experence">No relative experence</label><br>
+
+
+<spam>Enrolled_university:<br>
+    <input type="radio" id="Not" name="enrolled_university" value="0">
+    <label for="rel_experence">Not Enrolled</label><br>
+    <input type="radio" id="Fulltime" name="rel_experence" value="1">
+    <label for="rel_experence">Full time course</label><br>
+    <input type="radio" id="Part time" name="rel_experence" value="2">
+    <label for="rel_experence">Part time course</label><br>
+</spam>
+<br>
+
+<spam>Education Level:<br>
+    <input type="radio" id="Graduate" name="education_level" value="0">
+    <label for="education_level">Graduate</label><br>
+    <input type="radio" id="Masters" name="education_level" value="1">
+    <label for="education_level">Masters</label><br>
+    <input type="radio" id="High_school" name="education_level" value="2">
+    <label for="education_level">High School</label><br>
+    <input type="radio" id="phd" name="education_level" value="3">
+    <label for="education_level">PHD</label><br>
+    <input type="radio" id="Primary_school" name="education_level" value="4">
+    <label for="education_level">Primary school</label><br>
+</spam>
+<br>
+
+<spam>Major discipline:<br>
+    <input type="radio" id="STEM" name="major_discipline" value="0">
+    <label for="major_discipline">STEM</label><br>
+    <input type="radio" id="Business_degree" name="major_discipline" value="1">
+    <label for="major_discipline">Business Degree</label><br>
+    <input type="radio" id="Arts" name="major_discipline" value="2">
+    <label for="major_discipline">Arts</label><br>
+    <input type="radio" id="humanities" name="major_discipline" value="3">
+    <label for="major_discipline">humanities</label><br>
+    <input type="radio" id="No_major" name="major_discipline" value="4">
+    <label for="major_discipline">No Major</label><br>
+    <input type="radio" id="Other" name="major_discipline" value="5">
+    <label for="major_discipline">Other</label><br>
+</spam>
+<br>
+
+<spam>Experience :
+            <input type="number" id="experience" name="experience" >
+            </spam>             
+
+             <br><br>
+
+            <spam>Enter your company size:<br>
+    <input type="radio" id="10" name="company_size" value="0">
+    <label for="company_size">Below 10</label><br>
+    <input type="radio" id="50" name="company_size" value="1">
+    <label for="company_size">Below 50</label><br>
+    <input type="radio" id="100" name="company_size" value="5">
+    <label for="company_size">Below 100</label><br>
+    <input type="radio" id="500" name="company_size" value="2">
+    <label for="company_size">Below 500</label><br>
+    <input type="radio" id="1000" name="company_size" value="6">
+    <label for="company_size">Below 1000</label><br>
+    <input type="radio" id="5000" name="company_size" value="3">
+    <label for="company_size">Below 5000</label><br>
+    <input type="radio" id="10000" name="company_size" value="7">
+    <label for="company_size">Below 10000</label><br>
+    <input type="radio" id="10000" name="company_size" value="4">
+    <label for="company_size">More than 10000</label><br>  
+    
+    
+</spam> 
+
+<spam>Company Type:<br>
+    <input type="radio" id="PVT" name="company_type" value="0">
+    <label for="company_type">Pvt Ltd</label><br>
+    <input type="radio" id="Funded_startup" name="company_type" value="1">
+    <label for="company_type">Funded Startup</label><br>
+    <input type="radio" id="Startup" name="company_type" value="2">
+    <label for="company_type">Early Stage Startup</label><br>
+    <input type="radio" id="other" name="company_type" value="3">
+    <label for="company_type">Others</label><br>
+    <input type="radio" id="Public_sector" name="company_type" value="4">
+    <label for="company_type">Public Sector</label><br>
+    <input type="radio" id="NGO" name="company_type" value="5">
+    <label for="company_type">NGO</label><br>
+</spam>
+<br>
+
+<spam>Entry the Working Years of Last/Latest Job:<br>
+    <input type="radio" id="never" name="last_job" value="0">
+    <label for="last_job">Fresher</label><br>
+    <input type="radio" id="1" name="last_job" value="1">
+    <label for="last_job">1 year</label><br>
+    <input type="radio" id="2" name="last_job" value="2">
+    <label for="last_job">2 Years</label><br>
+    <input type="radio" id="3" name="last_job" value="3">
+    <label for="last_job">3 Years</label><br>
+    <input type="radio" id="4" name="last_job" value="4">
+    <label for="last_job">4 Years</label><br>
+    <input type="radio" id=">5" name="last_job" value="5">
+    <label for="last_job">Greater Than 4 years</label><br>
+</spam>
+<br>
+
+<spam>Enter Training Hours :
+            <input type="number" id="Training_hours" name="Training_hours" >
+            </spam>  
+<br>
+            
+             
+
+
+
+
+          <div class="btn"> <input class="submit" type="submit" value="Predict">
+           <input class="reset"type="reset" value="reset"> </div>                                     
+        </form></div>
+
+
+        <button id="predict">Check_out</button>
+    </div>
+    
+   
+    
+   <script src="js/jquery.js"></script>
+   
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("form").toggle("slow");
+      });
+      $("form").hide();
+    });
+   </script>
+</body>
+</html>
